@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>Instagram Feed con Bootstrap</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  </head>
+  <body>
+<!--NavBar-->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-light">
+<!--Intagram button-->              
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                  </svg> <strong>Instagram</strong></a>
+<!--New Post-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                  <div class="buttons-header d-flex justify-content-end">
+                    <button class="btn btn-success me-md-2" data-bs-toggle="modal"data-bs-target="#contenedor-modal">Crea un nuevo post</button>
+<!--Modal-->
+            <div class="modal" tabindex="-1" id="contenedor-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+<!--Create New Post-->                      
+                      <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body m-1 p-2">
+                          <strong>Caption</strong>
+                            <div class="card m-1">
+                              <div class="card-body">
+                                Add the Caption of your story here
+                              </div>
+                            </div>
+                          <ul class="nav nav-pills justify-content-right p-1" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-camera" viewBox="0 0 16 16">
+                                <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
+                                <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                              </svg></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="back" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                              </svg></button>
+                            </li>
+                          </ul>
+                      </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-success">Guardar cambios</button>
+                        </div>
+                      </div>
+                  </div>
+              </div>    
+                  </div>          
+              </div>
+<!--Settings-->              
+                <ul class="nav nav-tabs">
+                    <li class="nav-item dropdown">
+                        <button type="button" class="btn btn-secondary">
+                          <a class="dropdown-toggle text-light" data-bs-toggle="dropdown" href="#" type="button" class="btn btn-secondary" role="button" aria-expanded="false"><i class="bi bi-gear-fill"></i></a>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                                <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Log Out</a></li>
+                              </ul>
+                          </button>
+                    </li>
+                </ul>
+            
+              </div>
+        </nav>
+<!--NavBar Botons Feed-->        
+        <nav>
+            <div class="nav nav-pills d-flex justify-content-center" id="nav-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="bi bi-grid-3x3-gap-fill"></i></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="bi bi-square-fill"></i></button>
+                </li>
+            </div>
+        </nav>
+<!--Instagram Feed1-->        
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-4 p-3">
+                        <img src="https://picsum.photos/id/19/200/200" class="img-fluid rounded float-start" alt="branch" width="400px" height="400" > 
+                    </div>
+                    <div class="col-4 p-3">
+                        <img src="https://picsum.photos/id/56/200/200" class="img-fluid rounded float-start" alt="lights" width="400px" height="400" > 
+                    </div>
+                    <div class="col-4 p-3">
+                        <img src="https://picsum.photos/id/40/200/200" class="img-fluid rounded float-start" alt="cat" width="400px" height="400" > 
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-4 p-3">
+                        <img src="https://picsum.photos/id/63/200/200" class="img-fluid rounded float-start" alt="coffee" width="400px" height="400" > 
+                    </div>
+                    <div class="col-4 p-3">
+                        <img src="https://picsum.photos/id/77/200/200" class="img-fluid rounded float-start" alt="paisaje" width="400px" height="400" > 
+                    </div>
+                    <div class="col-4 p-3">
+                        <img src="https://picsum.photos/id/91/200/200" class="img-fluid rounded float-start" alt="camara" width="400px" height="400" > 
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-4 p-3">
+                        <img src="https://picsum.photos/id/111/200/200" class="img-fluid rounded float-start" alt="car" width="400px" height="400" > 
+                    </div>
+                    <div class="col-4 p-3">
+                        <img src="https://picsum.photos/id/167/200/200" class="img-fluid rounded float-start" alt="leaves" width="400px" height="400" > 
+                    </div>
+                    <div class="col-4 p-3">
+                        <img src="https://picsum.photos/id/156/200/200" class="img-fluid rounded float-start" alt="foot" width="400px" height="400" > 
+                    </div>
+                  </div>
+            </div>
+        </div> 
+<!--Instagram Feed2-->
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+            <div class="container m-1 p-2">
+                <div class="row justify-content-center">
+                    <div class="card" style="width: 35rem;">
+                        <div class="card-title text-left p-2">
+                            <Strong>Beach Holidays</Strong>
+                        </div>
+                          <img src="https://picsum.photos/id/156/200/200" class="card-img-top" alt="foot" width="400px" height="400">
+                        <div class="card-body text-left">
+                          <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                          </svg>
+                          <strong>204 Likes</strong></p>
+                          <p>Our first ever trip to the beach! We will soon be back no doubt!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container m-1 p-2">
+                <div class="row justify-content-center">
+                    <div class="card" style="width: 35rem;">
+                        <div class="card-title text-left p-2">
+                            <strong>Hot Coffee</strong>
+                        </div>
+                          <img src="https://picsum.photos/id/63/200/200" class="card-img-top" alt="cofee" width="400px" height="400">
+                        <div class="card-body text-left">
+                          <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                          </svg>
+                          <strong>563 Likes</strong>
+                        </p>Nothing better than a hot coffee with friends on a rainy sunday morning.... How do you enjoy your mornings?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container m-1 p-2">
+                <div class="row justify-content-center">
+                    <div class="card "style="width: 35rem;">
+                        <div class="card-title text-left p-2">
+                            <strong>Who let the Cat out?</strong>
+                        </div>
+                          <img src="https://picsum.photos/id/40/200/200" class="card-img-top" alt="cat" width="400px" height="400">
+                        <div class="card-body">
+                          <p class="card-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                            <strong>270 Likes</strong>
+                            <p>Today our little cat came to wake us up in the moring. Isn't he cute? All you want to do kiss that nose!</p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        </div>
+    </div>  
+    </div>
+
+
+</body>
+</html>
